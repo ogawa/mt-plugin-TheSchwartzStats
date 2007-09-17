@@ -1,7 +1,7 @@
 <mtapp:widget class="widget"
     label="<__trans phrase="TheSchwartz Stats">"
     can_close="1">
-   <mt:if name="data">
+    <mt:if name="data">
        <mt:loop name="data">
            <h4><__trans phrase="Job">: <mt:var name="name"></h4>
            <ul class="user-stats-list">
@@ -10,4 +10,5 @@
            </ul>
        </mt:loop>
     </mt:if>
+    <div><a href="javascript:void(0)" title="<__trans phrase="Run TheSchwartz Jobs">" onclick="window.open('<mt:var name="script_url">?__mode=run_ts_jobs', 'run_ts_jobs', 'width=400,height=400,resizable=yes'); return false"><span><__trans phrase="Run TheSchwartz Jobs"></span></a></div>
 </mtapp:widget>

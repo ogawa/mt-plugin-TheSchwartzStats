@@ -10,6 +10,9 @@ our %Lexicon = (
     'TheSchwartz Stats' => 'TheSchwartzのステータス',
     'Job Description' => 'ジョブの説明',
     'Remaining Jobs' => '残りジョブ数',
+    'Run TheSchwartz Jobs' => 'TheSchwartzジョブの実行',
+    'Now running TheSchwartz jobs at background.' => 'TheSchwartzジョブをバックグラウンドで実行しています。',
+    'This windows will be automatically closed at 10 seconds.' => 'このウインドウは10秒後に自動的にクローズされます。',
 );
 
 1;

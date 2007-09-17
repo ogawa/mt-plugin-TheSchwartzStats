@@ -27,6 +27,8 @@ my $plugin = __PACKAGE__->new({
 });
 MT->add_plugin($plugin);
 
+sub instance { $plugin }
+
 sub init_registry {
     my $plugin = shift;
     $plugin->registry({
@@ -40,7 +42,10 @@ sub init_registry {
 			singular => 1,
 			handler  => \&hdlr_widget,
 		    }
-		}
+		},
+		methods => {
+		    run_ts_jobs => 'TheSchwartzStats::CMS::run_ts_jobs',
+		},
 	    }
 	}
     });
