@@ -13,7 +13,7 @@ use base qw(MT::Plugin);
 
 use MT;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 my $plugin = __PACKAGE__->new({
     id          => 'theschwartz_stats',

@@ -26,18 +26,12 @@ sub run_ts_jobs {
 	my $client = MT::TheSchwartz->new;
 	$client->work_until_done;
 
-	CORE::exit(0);
-    }
-
-#    if (!$pid) {
 #	require File::Spec;
 #	my $runner = File::Spec->catfile($app->mt_dir, 'tools', 'run-periodic-tasks');
-#	close STDIN ; open STDIN , "</dev/null";
-#	close STDOUT; open STDOUT, ">/dev/null";
-#	close STDERR; open STDERR, ">/dev/null";
 #	exec $runner;
-#	CORE::exit(0);
-#    }
+
+	CORE::exit(0);
+    }
 
     MT::ObjectDriverFactory->init();
     MT::ObjectDriverFactory->configure();
