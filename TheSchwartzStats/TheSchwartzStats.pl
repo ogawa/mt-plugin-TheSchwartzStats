@@ -29,6 +29,14 @@ MT->add_plugin($plugin);
 
 sub instance { $plugin }
 
+# translate template text before calling MT::App::build_page()
+sub load_tmpl {
+    my $plugin = shift;
+    my $tmpl = $plugin->SUPER::load_tmpl(@_);
+    $tmpl->text($plugin->translate_templatized($tmpl->text));
+    $tmpl;
+}
+
 sub init_registry {
     my $plugin = shift;
     $plugin->registry({
